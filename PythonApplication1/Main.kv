@@ -1,0 +1,87 @@
+
+<Vhod>:
+  name: "VhodScreen"
+  canvas.before:
+    Color:
+      rgba: (0, 251, 255, 0.5)
+    Rectangle:
+      pos: self.pos
+      size: self.size
+ 
+  rows: 6
+  padding: 30
+  spacing: 30
+  background_color: '#E0FFFF'
+  
+  
+  BoxLayout:
+    orientation: 'vertical'
+    Image:
+      source: 'HunterShopClear.png' 
+      size_hint: 1, 1
+    Label:
+      text: 'Вход'
+      font_size: '60sp'
+  
+  BoxLayout:
+    orientation: 'vertical'
+    FloatLayout:
+      Label:
+        text: 'E-mail'
+        pos_hint: {'center_x': 0.1, 'y':0.1}
+        font_size: '30sp'
+      TextInput:
+        size_hint: 0.6, 0.5
+        pos_hint: {'center_x': 0.5, 'y':0.3}
+        multiline: False
+        font_size: '30sp'
+      
+    FloatLayout:
+      Label:
+        text: 'Номер'
+        pos_hint: {'center_x': 0.1, 'y':0.4}
+        font_size: '30sp'
+      Label:
+        text: 'лицензии'
+        pos_hint: {'center_x': 0.1, 'y':0.0}
+        font_size: 30
+      TextInput:
+        size_hint: 0.6, 0.5
+        pos_hint: {'center_x': 0.5, 'y':0.3}
+        multiline: False
+        font_size:30    
+    
+  BoxLayout:
+    pos_hint: 0.5, 0.1
+    orientation: 'vertical'
+    FloatLayout:
+      Button:
+        size_hint: 0.4, 0.6
+        pos_hint: {'center_x': 0.5, 'y':0.2}
+        text: 'Enter'
+        font_size:30
+        on_press:
+          root.manager.transition.direction = 'left'
+          root.manager.transition.duration = 1
+          root.manager.current = 'MenuScreen'
+      
+    FloatLayout:
+      Button:
+        size_hint: 0.4, 0.6
+        pos_hint: {'center_x': 0.5, 'y':0}
+        text: 'Registration'
+        font_size:30
+
+
+
+<Menu>:
+  name: "MenuScreen"
+  BoxLayout:
+    orientation: 'vertical'
+    Image:
+      source: 'HunterShopClear.png' 
+      size_hint: 1, 1
+    Label:
+      text: 'Вход'
+      font_size: '60sp'
+
